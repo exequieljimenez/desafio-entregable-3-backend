@@ -1,16 +1,5 @@
-const fs = require("fs")
 const express = require('express')
-
-class Contenedor {
-    constructor(filename) {
-        this.filename = filename
-    }
-
-    readList = () => {
-        let lista = JSON.parse(fs.readFileSync(this.filename))
-        return lista
-    } 
-}
+const Contenedor = require("./contenedor")
 
 const app = express()
 
